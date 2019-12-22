@@ -15,3 +15,9 @@ make your websites speak by including this superlight library which requires no 
 # how it works?
 
 well that's pretty easy all you need to do is include the **js-jspeaker** class anywhere in the html and sit back and watch your website speaking
+
+# todo
+
+<ul>
+  <li>add custom events</li>
+</ul>
