@@ -1,6 +1,10 @@
+# demo
+
+please checkout the <a href="https://mum-never-proud.github.io/jspeaker/">jSpeaker Demo</a>
+
 # jspeaker
 
-this library is creating using **Speech API** (currently experimental)
+this library is created using **Speech API** (currently experimental)
 make your websites speak by including this superlight library which requires no JS!
 
 # Features
