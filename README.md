@@ -18,6 +18,6 @@ well that's pretty easy all you need to do is include the **js-jspeaker** class 
 
 # todo
 
-[ ] - add events
-[ ] - control speech rate
-[ ] - cancel on selection clear
+- [ ] add events
+- [ ] control speech rate
+- [ ] cancel on clear selection
