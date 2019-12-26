@@ -1,0 +1,133 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>jSpeaker</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" type="text/css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/solarized-dark.min.css"
+    rel="stylesheet" type="text/css" />
+  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet" type="text/css" />
+  <style>
+    html,
+    body {
+      font-family: "Roboto";
+      background-color: #393E46;
+      color: #FFF;
+    }
+
+    h1 {
+      font-size: 32px;
+    }
+
+    h3 {
+      font-size: 24px;
+    }
+
+    .hljs {
+      background: #222831
+    }
+  </style>
+</head>
+
+<body class="js-jspeaker">
+  <div class="alert alert-info text-center" role="alert">
+    Please select any text on this website to see the magic ;)
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <h1 class="text-center mt-3">How to use jSpeaker</h1>
+        <p class="text-center">Want to make your websites speak?</p>
+        <p class="text-center">jSpeaker is intended to make your website more interactable!</p>
+        <h3 class="text-center">Getting started</h3>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-12">
+        <h3>jSpeaker Playground 😈</h3>
+        <iframe width="100%" height="300"
+          src="https://jsfiddle.net/mum_never_proud/5kLt7v9z/11/embedded/js,html,css,result/dark/"
+          allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+      </div>
+    </div>
+    <div class="row mt-5">
+      <div class="col-12">
+        <div class="alert alert-warning" role="alert">
+          Before calling any jSpeaker methods make sure it is initialized either by placing the class in HTML or by calling the jSpeaker.init() method
+        </div>
+      </div>
+    </div>
+    <div class="row mt-5">
+      <div class="col-12">
+        <h4>"js-jspeaker" class</h4>
+        <p>Place this class anywhere in the HTML Page (&lt;body&gt; recommended) and stay calm!</p>
+        <pre>
+          <code class="html">
+            ...
+            &lt;body class="js-jspeaker"&gt;
+              ...
+            &lt;/body&gt;
+            ...
+          </code>
+        </pre>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <h4>Lazyload</h4>
+        <p>You can also initialize jSpeaker only after an event has occured or after certain amount of time</p>
+        <pre>
+          <code class="javascript">
+            jSpeaker.init(optional_voice); // initialize jSpeaker with an optional voice or default system voice
+          </code>
+        </pre>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <h4>Control</h4>
+        <p>You can turn jSpeaker on / off at any point!</p>
+        <pre>
+          <code class="javascript">
+            jSpeaker.off(); // website won't speak anymore and text selection
+            jSpeaker.on(); // website starts speaking again
+          </code>
+        </pre>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <h4>Speak</h4>
+        <p>jSpeaker can also speak any given string!</p>
+        <pre>
+          <code class="javascript">
+            jSpeaker.speak('Hello World'); // speaks the given string
+          </code>
+        </pre>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <p class="text-center">Happy Coding!</p>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js"
+    type="text/javascript"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/javascript.min.js"
+    type="text/javascript"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/html.min.js"
+    type="text/javascript"></script>
+  <script src="https://cdn.jsdelivr.net/gh/mum-never-proud/jSpeaker/dist/jSpeaker.min.js"
+    type="text/javascript" async></script>
+  <script>
+    ;(function () {
+      hljs.initHighlightingOnLoad();
+    })();
+  </script>
+</body>
+
+</html>

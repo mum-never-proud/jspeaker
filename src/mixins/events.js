@@ -1,6 +1,8 @@
+import { NO_VOICE_ERROR } from "../constants";
+
 export function on() {
   if (!this.currentVoice) {
-    throw Error('jSpeaker doesn\'t has a voice, kindly call init()');
+    throw Error(NO_VOICE_ERROR);
   }
 
   document.addEventListener('mouseup', this.__textSelectionHandler__);

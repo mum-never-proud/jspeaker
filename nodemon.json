@@ -4,8 +4,12 @@
     "webpack.config.js",
     ".babelrc",
     ".gitignore",
+    "node_modules/**",
     "*.json",
     "__tests__/**",
-    "__mocks__/**"
+    "__mocks__/**",
+    "__helpers__/**",
+    "*.config.js",
+    "*.md"
   ]
 }

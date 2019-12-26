@@ -4,9 +4,7 @@ window.speechSynthesis = {
   paused: false,
   onvoiceschanged: null,
   getVoices: function() {
-    return [
-      {voiceURI: 'Veena', name: 'Veena', lang: 'en-IN', localService: true, default: true}
-    ];
+    return global.voices;
   },
   speak: jest.fn()
 };

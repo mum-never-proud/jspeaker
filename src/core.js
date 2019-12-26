@@ -5,14 +5,14 @@ import textSelectionHandler from './util/text-selection-handler';
 import extend from './util/extend';
 import init from './mixins/init';
 
-import { JSPEAKER_CLASS } from './constants';
+import { JSPEAKER_CLASS, NO_SPEECH_SYNTH_ERROR } from './constants';
 
 class jSpeaker {
   constructor() {
     this.synth = window.speechSynthesis;
 
     if (!this.synth) {
-      throw Error('speech synthesis not supported in this browser');
+      throw Error(NO_SPEECH_SYNTH_ERROR);
     }
 
     jSpeaker.prototype.__textSelectionHandler__ = textSelectionHandler.bind(this);
