@@ -10,7 +10,7 @@ make your websites speak by including this superlight library which requires no 
 # Features
 
 <ul>
-  <li>light weight ~ 3.21kb</li>
+  <li>light weight ~ 3.4kb</li>
   <li>written in es6</li>
   <li>requires no JS code from users end</li>
   <li>reads aloud the selected text</li>
@@ -24,4 +24,3 @@ well that's pretty easy all you need to do is include the **js-jspeaker** class 
 
 - [ ] add events
 - [ ] control speech rate
-- [ ] cancel on clear selection

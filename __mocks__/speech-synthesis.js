@@ -6,5 +6,6 @@ window.speechSynthesis = {
   getVoices: function() {
     return global.voices;
   },
+  cancel: jest.fn(),
   speak: jest.fn()
 };

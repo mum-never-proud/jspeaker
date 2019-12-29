@@ -1,9 +1,12 @@
-import voiceSearch from '../util/voice-search';
+import internals from '../priv-data';
 
 export default function(voice) {
-  this.currentVoice = voiceSearch(this.voices, voice ? { name: voice } : { default: true });
+  const synth = internals.synth;
 
-  this.on();
+  if (!synth.onvoiceschanged) {
+    synth.onvoiceschanged = () => internals.updateVoices(voice);
+  }
+  internals.updateVoices(voice);
 
   return this;
 }
