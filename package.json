@@ -1,12 +1,13 @@
 {
   "name": "jspeaker",
   "version": "1.0.0",
-  "description": "speak out selected text on a webpage",
+  "description": "text to speech conversion library",
   "main": "./src/jSpeaker.js",
   "scripts": {
-    "start": "nodemon --exec './node_modules/.bin/babel-node & npm run build' ./src/jSpeaker.js",
-    "build": "./node_modules/.bin/webpack",
-    "test": "./node_modules/.bin/jest"
+    "build": "parcel build ./src/jSpeaker.js --global '$j' -o jSpeaker.min.js",
+    "dev": "parcel serve   ./src/jSpeaker.js --global '$j'",
+    "test": "jest",
+    "test-coverage": "jest --coverage"
   },
   "repository": {
     "type": "git",
@@ -26,12 +27,12 @@
   },
   "homepage": "https://github.com/mum-never-proud/jspeaker#readme",
   "devDependencies": {
-    "@babel/core": "7.7.5",
-    "@babel/node": "7.7.4",
-    "@babel/preset-env": "7.7.6",
-    "babel-loader": "8.0.6",
-    "jest": "24.9.0",
-    "webpack": "4.41.2",
-    "webpack-cli": "3.3.10"
+    "eslint": "7.7.0",
+    "eslint-config-airbnb-base": "14.2.0",
+    "eslint-import-resolver-jest": "3.0.0",
+    "eslint-plugin-import": "2.22.0",
+    "eslint-plugin-jest": "23.20.0",
+    "jest": "26.4.2",
+    "parcel": "1.12.4"
   }
 }
