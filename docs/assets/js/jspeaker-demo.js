@@ -9,7 +9,6 @@
     return;
   }
 
-  let isElapsedTimeInSeconds = false;
   const controlsWrapper = document.querySelector('#controls-wrapper');
   const speechStatus = document.querySelector('#speech-status');
   const timeElapsed = document.querySelector('#time-elapsed');
@@ -24,16 +23,7 @@
     events: {
       onVoicesUpdate: showControls,
       onBoundary: (e) => {
-        const toMilliseconds = e.elapsedTime / 1000.00;
-
-        if (!isElapsedTimeInSeconds && toMilliseconds < 1) {
-          isElapsedTimeInSeconds = true;
-        }
-
-        timeElapsed.innerHTML = (isElapsedTimeInSeconds
-          ? e.elapsedTime
-          : toMilliseconds
-        ).toFixed(2);
+        timeElapsed.innerHTML = e.elapsedTime.toFixed(2);
         spoken.innerHTML = e.wordIndex;
       },
       onEnd: () => getControlsSvgItem().setAttribute('href', '#img-play'),
@@ -41,7 +31,7 @@
   });
 
   /*
-   * some browsers just don't send voices updated event but they do support STT feature
+   * some browsers just don't send events but they do support STT feature
    * in such case hide spinner after 5s
    */
 
@@ -53,7 +43,7 @@
 
     if (newSvgID === '#img-stop') {
       speechStatus.style.opacity = '1';
-      jSpeaker.speak(document.querySelector('.card-body.story').textContent);
+      jSpeaker.speak(document.querySelector('.card-body.story').innerText);
     } else {
       jSpeaker.cancel();
     }
