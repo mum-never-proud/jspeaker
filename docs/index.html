@@ -4,11 +4,24 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
   <title>jSpeaker</title>
+
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-  <link href="  https://cdn.jsdelivr.net/gh/mum-never-proud/unified-demo-theme@latest/dist/styles/theme.min.css" rel="stylesheet" type="text/css" />
+  <link href="https://cdn.jsdelivr.net/gh/mum-never-proud/unified-demo-theme/dist/styles/theme.min.css" rel="stylesheet" type="text/css" />
+  <link href="./assets/css/jspeaker-demo.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
+  <svg display="none">
+    <defs>
+      <g id="img-play">
+        <path xmlns="http://www.w3.org/2000/svg" fill="rgb(7.843137%,43.529412%,74.509804%)" d="M 256 0 C 114.832031 0 0 114.84375 0 256 C 0 397.15625 114.832031 512 256 512 C 397.167969 512 512 397.15625 512 256 C 512 114.84375 397.167969 0 256 0 Z M 256 490.667969 C 126.605469 490.667969 21.332031 385.394531 21.332031 256 C 21.332031 126.605469 126.605469 21.332031 256 21.332031 C 385.394531 21.332031 490.667969 126.605469 490.667969 256 C 490.667969 385.394531 385.394531 490.667969 256 490.667969 Z M 256 490.667969"/><path xmlns="http://www.w3.org/2000/svg" fill="rgb(7.843137%,43.529412%,74.509804%)" d="M 357.769531 247.03125 L 208.4375 151.03125 C 205.167969 148.894531 200.9375 148.78125 197.5625 150.636719 C 194.125 152.511719 192 156.09375 192 160 L 192 352 C 192 355.90625 194.125 359.488281 197.5625 361.363281 C 199.144531 362.230469 200.917969 362.667969 202.667969 362.667969 C 204.667969 362.667969 206.6875 362.105469 208.4375 360.96875 L 357.769531 264.96875 C 360.8125 263.011719 362.667969 259.625 362.667969 256 C 362.667969 252.375 360.8125 248.988281 357.769531 247.03125 Z M 213.332031 332.457031 L 213.332031 179.542969 L 332.269531 256 Z M 213.332031 332.457031"/>
+      </g>
+      <g id="img-stop">
+        <path xmlns="http://www.w3.org/2000/svg" fill="rgb(7.843137%,43.529412%,74.509804%)" d="M 136.535156 375.464844 L 375.464844 375.464844 L 375.464844 136.535156 L 136.535156 136.535156 Z M 153.601562 153.601562 L 358.398438 153.601562 L 358.398438 358.398438 L 153.601562 358.398438 Z M 153.601562 153.601562"/><path xmlns="http://www.w3.org/2000/svg" fill="rgb(7.843137%,43.529412%,74.509804%)" d="M 256 0 C 114.839844 0 0 114.839844 0 256 C 0 397.160156 114.839844 512 256 512 C 397.160156 512 512 397.160156 512 256 C 512 114.839844 397.160156 0 256 0 Z M 256 494.933594 C 124.253906 494.933594 17.066406 387.746094 17.066406 256 C 17.066406 124.253906 124.253906 17.066406 256 17.066406 C 387.746094 17.066406 494.933594 124.253906 494.933594 256 C 494.933594 387.746094 387.746094 494.933594 256 494.933594 Z M 256 494.933594"/>
+      </g>
+    </defs>
+  </svg>
   <div class="header">
     <h1 class="text-center">jSpeaker</h1>
   </div>
@@ -21,12 +34,15 @@
     <div class="row mt-3">
       <div class="col-12">
         <div class="card">
-          <img class="card-img-top" src="..." alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <div class="card-body d-flex flex-column align-items-center">
+            <h2 class="card-title text-center">The Hare and the Tortoise</h2>
+            <span id="controls-wrapper">
+              <svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" version="1.1" preserveAspectRatio="none">
+                <use href="#img-play"></use>
+              </svg>
+            </span>
           </div>
-          <div class="card-body">
+          <div class="card-body story">
             <p>
               That was a beautiful forest. There lived a hare, which was very fast in running. It always boasted about how
               fast it could run. It would call other animals for a race to prove that he really was the fastest animal in
@@ -51,7 +67,7 @@
               How much ever competent you are, never relax in a race. Do not take any opponent lightly.
             </p>
             <p>
-              <b>The story continues</b><br />
+              <b>The story continues</b>:<br />
               The hare was disappointed at losing the race and did some soul searching. It had realized that the tortoise was taken
               lightly. It had concluded that it was over confident and lax. Had it not taken things for granted, the tortoise would
               have never won the race.
@@ -73,7 +89,7 @@
               It is OK to make mistakes, but realize the mistakes quickly and correct them.
             </p>
             <p>
-              <b>The story does not end here</b><br />
+              <b>The story does not end here</b>:<br />
               The tortoise did a soul searching this time. It realized that it could never beat the hare in the current format of
               the race. It had called the hare for a race again, but in a different route. The hare had also agreed. By the earlier
               success, the hare now had become more confident that it could beat the tortoise in any terrain.
@@ -96,7 +112,7 @@
               Even if you are slow, select your route carefully. Know your strengths and work according to your strengths.
             </p>
             <p>
-              <b>The story has not ended yet!</b><br />
+              <b>The story has not ended yet</b>:<br />
               By the time, the hare and the tortoise have become pretty good friends. They realized the potential of each other and
               knew the earlier race could have been run better. They both have decided to go for another race, but had decided to do
               it as a team.
@@ -129,7 +145,12 @@
         </footer>
       </div>
     </div>
+    <div id="speech-status">
+      Time Elapsed: <span id="time-elapsed"></span>s<br />
+      Words Spoken: <span id="words-spoken"></span>
+    </div>
   </div>
-  <script src="https://cdn.jsdelivr.net/gh/mum-never-proud/jSpeaker@latest/dist/jSpeaker.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/mum-never-proud/jSpeaker/dist/jSpeaker.min.js" type="text/javascript"></script>
+  <script src="./assets/js/jspeaker-demo.js" type="text/javascript"></script>
 </body>
 </html>

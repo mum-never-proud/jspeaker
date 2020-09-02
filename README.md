@@ -1,26 +1,12 @@
+# jSpeaker
+
+A tiny JS library that makes use of  **Web Speech API** (currently experimental) to add Speech To Text feature in Web pages.
+
 # demo
 
-please checkout the <a href="https://mum-never-proud.github.io/jspeaker/">jSpeaker Demo</a>
-
-# jspeaker
-
-this library is created using **Speech API** (currently experimental)
-make your websites speak by including this superlight library which requires no JS!
-
-# Features
-
-<ul>
-  <li>light weight ~ 3.4kb</li>
-  <li>written in es6</li>
-  <li>requires no JS code from users end</li>
-  <li>reads aloud the selected text</li>
-</ul>
-
-# how it works?
-
-well that's pretty easy all you need to do is include the **js-jspeaker** class anywhere in the html and sit back and watch your website speaking the selected text
+check out <a href="https://mum-never-proud.github.io/jspeaker/">jSpeaker Demo</a>
 
 # todo
 
-- [ ] add events
+- [ ] add more events
 - [ ] control speech rate
