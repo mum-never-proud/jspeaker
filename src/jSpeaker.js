@@ -3,6 +3,8 @@
     // eslint-disable-next-line no-console
     console.warn('speech synthesis is not available');
 
+    m.exports = null;
+
     return;
   }
 
