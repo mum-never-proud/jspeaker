@@ -1,11 +1,11 @@
 {
   "name": "jspeaker",
   "version": "1.0.0",
-  "description": "text to speech conversion library",
+  "description": "A tiny JS library that makes use of Web Speech API (currently experimental) to add Speech to Text feature in Web pages.",
   "main": "./dist/jSpeaker.min.js",
   "scripts": {
     "build": "parcel build ./src/jSpeaker.js --global '$j' -o jSpeaker.min.js",
-    "dev": "parcel serve   ./src/jSpeaker.js --global '$j'",
+    "dev": "parcel watch ./src/jSpeaker.js --global '$j'  -o jSpeaker.min.js",
     "test": "jest",
     "test-coverage": "jest --coverage"
   },
