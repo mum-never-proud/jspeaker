@@ -4,7 +4,7 @@ A tiny JS library that makes use of  **Web Speech API** (currently experimental)
 
 ## Demo
 
-check out <a href="https://mum-never-proud.github.io/jspeaker/">jSpeaker Demo</a>
+Check out <a href="https://mum-never-proud.github.io/jspeaker/">jSpeaker Demo</a>
 
 ## Todo
 
