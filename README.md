@@ -1,6 +1,6 @@
 # jSpeaker
 
-A tiny JS library that makes use of  **Web Speech API** (currently experimental) to add Speech to Text feature in Web pages.
+A tiny JS library that makes use of  **Web Speech API** (currently experimental) to add Text to Speech feature in Web pages.
 
 ## Demo
 
